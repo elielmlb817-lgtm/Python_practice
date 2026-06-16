@@ -1,0 +1,25 @@
+principal= int(input("Enter the principal amount: "))
+rate= float(input("Enter the interest rate: "))
+time= int(input("Enter the number of years: "))
+
+while principal < 0:
+ principal = int(input("Enter a valid principal amount: "))
+
+if principal > 0:
+    print(f'{principal :,},')
+else:
+    print(f' {principal}')
+
+while rate < 0:
+
+    print(' your rate interest is not valid, please enter a valid interest rate')
+    rate = str(input("Enter the interest rate: "))
+
+while time <= 0:
+
+    print(' your time cannot be less or equal to zero, pleas enter a valid time')
+    time = int(input("Enter the number of years: "))
+
+
+total=  principal*pow((1+rate/100),time)
+print(f''your total is: ${total:.2f}')
